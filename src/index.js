@@ -1,6 +1,9 @@
 import React from 'react'; 
 import ReactDOM from 'react-dom';
 
+//CSS
+import './index.css'
+
 // JSX Rules
 // return single element
 // div/ section/ article or Fragment(React.Fragment)
@@ -11,7 +14,7 @@ import ReactDOM from 'react-dom';
 
 function BookList() {
     return (
-        <section>         
+        <section className='booklist'>         
             <Book />
             <Book />
             <Book />
@@ -21,7 +24,7 @@ function BookList() {
 }
 const Book = () => {
     return (
-        <article>
+        <article className='book'>
             <Image></Image>
             <Title></Title>
             <Author></Author>
