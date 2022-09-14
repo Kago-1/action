@@ -12,36 +12,35 @@ import './index.css'
 // close every element
 // formatting
 
+// setup variables
+const Title = 'Where the Crawdads sing'; 
+const Author = 'Delia Owens';
+const Image = 'https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T1/images/I/516XEz3XX4L._AC_SX184_.jpg';
+
 function BookList() {
     return (
         <section className='booklist'>         
+            <Book job= 'developer'/>
             <Book />
             <Book />
             <Book />
-             <Book />
         </section>
     );
 }
-const Book = () => {
+const Book = (props) => {
     return (
         <article className='book'>
-            <Image></Image>
-            <Title></Title>
-            <Author></Author>
+            <img src={Image}/>
+            <h1>{Title.toUpperCase()}</h1>
+            <h2>{Author}</h2>
+            <p>{props.job}</p>
         </article>
     );
 };
-const Image = () => (
-    <img src="https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T1/images/I/516XEz3XX4L._AC_SX184_.jpg" alt="" />
-);
-
-const Title = () => <h1>Where the Crawdads sing</h1>
-const Author = () => <h2>Delia Owens</h2>
-
 
 // const Person = () => <h1>Steve Jad</h1>
 // const Message = () => {
 //     return <p>CEO Africa Data Cables</p>
-// };
+// }; 
 
 ReactDOM.render(<BookList/>,document.getElementById('root'));
