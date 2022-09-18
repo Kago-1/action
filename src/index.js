@@ -30,6 +30,6 @@ function BookList() {
 // const Person = () => <h1>Steve Jad</h1>
 // const Message = () => {
 //     return <p>CEO Africa Data Cables</p>
-// }; 
+// }; s
 
 ReactDOM.render(<BookList/>,document.getElementById('root'));
